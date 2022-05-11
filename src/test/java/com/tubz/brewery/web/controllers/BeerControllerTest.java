@@ -89,7 +89,6 @@ class BeerControllerTest {
 
         BeerPagedList beerPagedList;
 
-
         @BeforeEach
         void setup() {
             List<BeerDto> beerDtoList = new ArrayList<>();
@@ -122,6 +121,5 @@ class BeerControllerTest {
                     .andExpect(jsonPath("$.content[0].id", is(validBeerDto.getId().toString())))
                     .andExpect(jsonPath("$.content[0].beerName", is(validBeerDto.getBeerName())));
         }
-
     }
 }
